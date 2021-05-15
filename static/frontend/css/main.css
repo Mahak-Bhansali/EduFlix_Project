@@ -691,12 +691,13 @@ input:focus {
 .sign-in-box .btn-sign-in {
     color: #686f7a;
     background-color: #fff;
-    border: 1px solid #505763;
+    border: 1px solid #0464fc;
 }
 
 .sign-in-box .btn-sign-in:hover,
 .sign-in-box .btn-sign-in:focus {
-    background-color: #f2f3f5;
+    background-color: white;
+    color: #0464fc;
 }
 
 .sign-in-box .btn-sign-up {
