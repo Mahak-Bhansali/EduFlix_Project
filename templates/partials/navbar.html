@@ -32,15 +32,11 @@
                         {#                        Wishlist will be here#}
                     </div>
 
-                    <div class="cart-box menu-icon-box" id="cart_items">
-                        {% include 'partials/cart.html' %}
-                    </div>
+                        <div class="cart-box menu-icon-box" id="cart_items">
+                            {% include 'partials/cart.html' %}
+                        </div>
 
-                    <div class="teacher" id="teach-elements">
-                        <a href="{% url 'accounts:login' %}" class="btn btn-sign-in">Teach on EduFlix</a>
-
-                    </div>
-
+                    
                     {% if request.user.is_authenticated %}
                         <div class="user-box menu-icon-box">
                             <div class="icon">
@@ -95,6 +91,8 @@
                     {% else %}
                         <span class="signin-box-move-desktop-helper"></span>
                         <div class="sign-in-box btn-group">
+
+                            <a href="{% url 'accounts:register' %}" class="btn btn-sign-in">Teach on Eduflix</a>
 
                             <a href="{% url 'accounts:login' %}" class="btn btn-sign-in">Login</a>
 
