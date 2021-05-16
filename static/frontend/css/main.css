@@ -1,33 +1,33 @@
 
 html {
-    color: #222;
+    color: #0464fc;
     font-size: 1em;
     line-height: 1.4;
 }
 
 :-moz-selection {
-    background: #b3d4fc;
+    background: #0464fc;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #0464fc;
     text-shadow: none;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     padding-right: 0 !important;
-    color: #29303b;
+    color:black;
     font-size: 15px;
 }
 
 body.white-bg {
-    background: #fff;
+    background: white;
 }
 
 body.gray-bg {
-    background: #f7f8fa;
+    background: white;
 }
 
 body.modal-open {
@@ -47,12 +47,13 @@ input[type="button"] {
 }
 
 a {
-    color: #007791;
+    color: #0464fc;
+    text-color:green;
 }
 
 a:hover {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 *[data-toggle="modal"],
@@ -82,7 +83,7 @@ label {
 }
 
 .btn {
-    color:blue;
+    color:#0464fc;
     background-color: white;
     border-color:white;
     padding: 11px 12px;
@@ -91,7 +92,6 @@ label {
     line-height: 1.35135;
     font-weight: 600;
 }
-
 .btn:hover,
 .btn:focus {
     background-color:#0464fc;
@@ -102,7 +102,7 @@ label {
 textarea:focus,
 .form-control:focus,
 input:focus {
-    border-color: #0464fc;
+    border-color: white;
 }
 
 .rating i {
@@ -110,7 +110,7 @@ input:focus {
 }
 
 .rating i.filled {
-    color: #f4c150;
+    color: #0464fc;
 }
 
 .rating i.half-filled {
@@ -123,13 +123,13 @@ input:focus {
     top: 0;
     left: 0;
     font-size: inherit;
-    color: #f4c150;
+    color: #0464fc;
     z-index: 1;
 }
 
 /*lesson css*/
 .lesson_duration {
-    background-color: #7c96ab;
+    background-color: #0464fc;
     border-radius: 5px;
     padding: 3px 5px;
     color: #fff;
@@ -197,6 +197,7 @@ input:focus {
 
 .menu-area .navbar {
     padding: 0;
+    background-color: #0464fc;
 }
 
 .signin-box-move-mobile-helper,
@@ -216,8 +217,8 @@ input:focus {
 }
 
 .search-box input {
-    background-color: #f2f3f5;
-    border: 1px solid #f2f3f5;
+    background-color: white;
+    border: 1px solid white;
     height: 45px;
     padding: 0 15px;
     border-radius: 2px 0 0 2px;
@@ -225,30 +226,31 @@ input:focus {
 }
 
 .search-box input:focus {
-    background-color: #fff;
+    background-color: #0464fc;
     border-color: #dedfe0;
     border-right-color: transparent;
 }
 
 .search-box input:focus + .input-group-append button {
-    background-color: #fff;
-    border-color: #dedfe0;
+    background-color: #0464fc;
+    border-color: #0464fc;
     border-left-color: transparent;
 }
 
 .search-box button {
-    border: 1px solid #f2f3f5;
+    border: 1px solid #0464fc;
     border-radius: 0 2px 2px 0;
     font-size: 15px;
     padding: 10px 15px;
-    background: #f2f3f5;
-    color: #ec5252;
+    background: white;
+    color: #0464fc;
 }
+/* navbar search box*/
 
 .search-box button:hover,
 .search-box button:focus {
-    background-color: #ec5252 !important;
-    border-color: #ec5252;
+    background-color: #0464fc !important;
+    border-color: #0464fc;
     color: #fff;
 }
 
@@ -279,7 +281,7 @@ input:focus {
     position: absolute;
     top: 14px;
     right: 2px;
-    background-color: #ec5252;
+    background-color: #0464fc;
     border-radius: 15px;
     color: #fff;
     font-size: 10px;
@@ -297,15 +299,15 @@ input:focus {
     line-height: 45px;
     display: inline-block;
     border-radius: 50%;
-    color: #686f7a;
+    color: rgb(4, 4, 243);
     border: 1px solid transparent;
     margin: 10px 0;
     font-size: 18px;
 }
 
 .menu-icon-box .icon a:hover {
-    background: rgba(20, 23, 28, .05);
-    border-color: rgba(20, 23, 28, .05);
+    background: #0464fc;
+    border-color: #0464fc;
 }
 
 .menu-icon-box:hover > .dropdown {
@@ -318,10 +320,10 @@ input:focus {
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-    background-color: #fff;
+    background-color: #0464fc;
     border-top: 1px solid #e8e9eb;
     box-shadow: 0 4px 16px rgba(20, 23, 28, .25);
-    color: #505763;
+    color: white;
     font-size: 13px;
     left: inherit;
     list-style: none;
@@ -686,6 +688,9 @@ input:focus {
     font-weight: 600;
     margin-left: 5px !important;
     border-radius: 2px !important;
+    color:#0464fc;
+    background-color: white;
+    border-color:white;
 }
 
 .sign-in-box .btn-sign-in {
@@ -696,8 +701,9 @@ input:focus {
 
 .sign-in-box .btn-sign-in:hover,
 .sign-in-box .btn-sign-in:focus {
-    background-color: white;
-    color: #0464fc;
+    background-color:#0464fc;
+    border-color: #0464fc;
+    color: #fff;
 }
 
 .sign-in-box .btn-sign-up {
@@ -1750,8 +1756,8 @@ input:focus {
     course header
 */
 section.course-header-area {
-    background-color: #29303b;
-    color: #fff;
+    background-color: #0464fc;
+    color: white;
     padding: 60px 0;
 }
 
@@ -1761,7 +1767,7 @@ section.course-header-area {
     top: 0;
     left: 0;
     z-index: 9;
-    background-color: rgba(41, 48, 59, .8);
+    background-color: #0464fc;
     padding: 10px 0;
 }
 
@@ -2613,7 +2619,7 @@ section.course-header-area {
 
 section.category-header-area {
     padding: 40px 0 30px;
-    background: #29303b;
+    background: #0464fc;
     color: #fff;
 }
 
