@@ -149,6 +149,11 @@ input:focus {
 /*
     menu
 */
+.navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .corner-triangle.top-left:after {
   top: -12px;
@@ -212,45 +217,49 @@ input:focus {
 */
 
 .search-box {
-  margin-right: 50px;
-  padding: 10px 0;
+  margin-right: 10px;
+  padding: 1px 0;
 }
 
 .search-box input {
   background-color: white;
-  border: 1px solid white;
+  border: 1px solid black;
   height: 45px;
-  padding: 0 15px;
-  border-radius: 2px 0 0 2px;
+  padding: 0 20px;
+  border-radius: 30px 0 0 30px;
   font-size: 13px;
+  border-right: white;
 }
 
 .search-box input:focus {
-  background-color: #0464fc;
-  border-color: #dedfe0;
-  border-right-color: transparent;
+  background-color: #fff;
+  border-color: black;
+  border-right: white;
 }
 
 .search-box input:focus + .input-group-append button {
   background-color: #fff;
-  border-color: #0464fc;
+  border-color: black;
+
   border-left-color: transparent;
 }
 
 .search-box button {
-  border: 1px solid #0464fc;
-  border-radius: 0 2px 2px 0;
+  border: 1px solid black;
+  border-radius: 0 30px 30px 0;
   font-size: 15px;
   padding: 10px 15px;
   background: white;
   color: #0464fc;
+  border-left: white;
 }
 /* navbar search box*/
 
 .search-box button:hover,
 .search-box button:focus {
-  background-color: #fff !important;
-  border-color: #fff;
+  background-color: #0464fc !important;
+  border-color: black;
+  border-left: white;
   color: #fff;
 }
 
@@ -694,29 +703,29 @@ input:focus {
 }
 
 .sign-in-box .btn-sign-in {
-  color: #686f7a;
+  color: black;
   background-color: #fff;
-  border: 1px solid #0464fc;
+  border: 1px solid black;
 }
 
 .sign-in-box .btn-sign-in:hover,
 .sign-in-box .btn-sign-in:focus {
   background-color: #0464fc;
-  border-color: #0464fc;
+  border-color: black;
   color: #fff;
 }
 
 .sign-in-box .btn-sign-up {
-  color: #686f7a;
-  background-color: white;
-  border: 1px solid #0464fc;
+  color: #fff;
+  background-color: black;
+  border: 1px solid black;
 }
 
 .sign-in-box .btn-sign-up:hover,
 .sign-in-box .btn-sign-up:focus {
-  background-color: #0464fc;
-  border-color: #0464fc;
-  color: #fff;
+  background-color: white;
+  border-color: black;
+  color: black;
 }
 
 .sign-in-box .modal-dialog {
@@ -2120,7 +2129,7 @@ section.course-header-area {
 }
 
 .what-you-get-box ul li:before {
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   font-weight: 900;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2565,7 +2574,7 @@ section.course-header-area {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   font-weight: 900;
   position: absolute;
   left: 22px;
@@ -2618,7 +2627,7 @@ section.course-header-area {
 }
 
 .course-curriculum-accordion .lecture-list .lecture:before {
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
