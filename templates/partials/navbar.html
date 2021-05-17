@@ -11,14 +11,14 @@
                         <li><a class="mobile-search-trigger" href="#mobile-search">Search<span></span></a></li>
                     </ul>
 
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" style="color:#0464fc" href="/">
                         {#                        {{ --<img src="" alt="" height="30">--}}#}
                         EduFlix
                     </a>
 
                     {% include 'partials/menu.html' %}
 
-                    <form class="inline-form" action="{% url 'udemy:search' %}" method="get" style="width: 50%;">
+                    <form class="inline-form mr-auto" action="{% url 'udemy:search' %}" method="get" style="width: 50%;">
                         <div class="input-group search-box mobile-search">
                             <input type="text" name='q' class="form-control"
                                    placeholder="Search for courses">
@@ -32,16 +32,13 @@
                         {#                        Wishlist will be here#}
                     </div>
 
-                    <div class="cart-box menu-icon-box" id="cart_items">
-                        {% include 'partials/cart.html' %}
-                    </div>
+                   
 
-                    <div class="teacher" id="teach-elements">
-                        <a href="{% url 'accounts:login' %}" class="btn btn-sign-in">Teach on EduFlix</a>
-
-                    </div>
-
+                    
                     {% if request.user.is_authenticated %}
+                        <div class="cart-box menu-icon-box" id="cart_items"> 
+                             {% include 'partials/cart.html' %}
+                        </div>
                         <div class="user-box menu-icon-box">
                             <div class="icon">
                                 <a href="">
@@ -95,6 +92,8 @@
                     {% else %}
                         <span class="signin-box-move-desktop-helper"></span>
                         <div class="sign-in-box btn-group">
+
+                            <a href="{% url 'accounts:register' %}" class="btn btn-sign-in">Teach on Eduflix</a>
 
                             <a href="{% url 'accounts:login' %}" class="btn btn-sign-in">Login</a>
 
