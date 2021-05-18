@@ -85,8 +85,7 @@
        </div>
       </div>
 
-
-      <div class="row d-flex justify-content-center ">
+      <div class="row d-flex justify-content-center">
        <div class="text-center">
         <ul class="list-unstyled list-inline">
           <li class="list-inline-item">
@@ -113,10 +112,13 @@
        </div>
        </div>
 
+
+    </div>
    </div>
  </footer>
  <!-- Footer -->
 
+      
 <!-- Modal -->
 <div
   class="modal fade"
@@ -201,6 +203,7 @@
         <h5 class="m-progress-stats modal-title">
           &nbsp;of&nbsp;<span class="m-progress-total"></span>
         </h5>
+<<<<<<< HEAD
 
         <button type="button" class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
@@ -232,6 +235,39 @@
                     <input type="radio" id="star2" name="rating" value="2" />
                     <label class="full" for="star2"></label>
 
+=======
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="m-progress-bar-wrapper">
+        <div class="m-progress-bar"></div>
+      </div>
+      <form action="#" method="post">
+        {% csrf_token %}
+        <div class="modal-body step step-1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="modal-rating-box">
+                  <h4 class="rating-title">
+                    How would you rate this course overall?
+                  </h4>
+                  <fieldset class="your-rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label class="full" for="star5"></label>
+
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label class="full" for="star4"></label>
+
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label class="full" for="star3"></label>
+
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label class="full" for="star2"></label>
+
+>>>>>>> 5ef86c9262e75aa5598d6c5d94a2998ebadad169
                     <input type="radio" id="star1" name="rating" value="1" />
                     <label class="full" for="star1"></label>
                   </fieldset>
