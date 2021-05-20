@@ -38,15 +38,29 @@
                 </div>
             </div>
             <div class="col-lg-9" id="video_player_area">
-                <div class="" style="background-color: #333;">
-                    <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9" style="background-color: #333;">
+                
+                    {% comment %} {% for x in video %} {% endcomment %}
+                    
+                    {% for lesson in lessons %}
+
+                    <video class="video-fluid embed-responsive embed-responsive-16by9" controls = "controls" style= width="100%"; height="500"; autoplay loop muted>
+                        <source src="{{lesson.video_url.url}}" type="video/mp4" />
+                    </video>
+                    
+                    {% endfor %}
+
+                    {% comment %} {% endfor %} {% endcomment %}
+
+                    {% comment %} <div class="embed-responsive embed-responsive-16by9">
                         <iframe width="100%" height="500" class="embed-responsive-item"
                                 src="https://www.youtube.com/embed/Kyx2PsuwomE" frameborder="0"
                                 allowfullscreen>
                         </iframe>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
+
         </div>
     </div>
 

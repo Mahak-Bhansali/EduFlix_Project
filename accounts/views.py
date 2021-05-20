@@ -122,15 +122,15 @@ class StartLessonView(DetailView):
 
         course = get_object_or_404(Course, slug=self.kwargs["slug"])
         queryset = queryset.filter(course=course)
-        try:
+        # try:
             # Get the single item from the filtered queryset
-            obj = queryset[:1].get()
-            url = obj.video_url
-            url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
-            obj.video_url = url
-        except queryset.model.DoesNotExist:
-            raise Http404("No %(verbose_name)s found matching the query" %
-                          {'verbose_name': self.model._meta.verbose_name})
+        obj = queryset[:1].get()
+        url = obj.video_url
+        # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
+        obj.video_url = url
+        # except queryset.model.DoesNotExist:
+        #     raise Http404("No %(verbose_name)s found matching the query" %
+        #                   {'verbose_name': self.model._meta.verbose_name})
         return obj
 
     def get_context_data(self, **kwargs):
@@ -156,15 +156,15 @@ class LessonView(DetailView):
 
         lesson_id = self.kwargs['id']
         queryset = queryset.filter(id=lesson_id)
-        try:
+        # try:
             # Get the single item from the filtered queryset
-            obj = queryset.get()
-            url = obj.video_url
-            url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
-            obj.video_url = url
-        except queryset.model.DoesNotExist:
-            raise Http404("No %(verbose_name)s found matching the query" %
-                          {'verbose_name': self.model._meta.verbose_name})
+        obj = queryset.get()
+        url = obj.video_url
+        # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
+        obj.video_url = url
+        # except queryset.model.DoesNotExist:
+            # raise Http404("No %(verbose_name)s found matching the query" %
+            #               {'verbose_name': self.model._meta.verbose_name})
         return obj
 
     def get_context_data(self, **kwargs):

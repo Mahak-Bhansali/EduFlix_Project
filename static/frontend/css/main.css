@@ -286,11 +286,11 @@ input:focus {
   position: relative;
 }
 
-.menu-icon-box .icon .number {
+.menu-icon-box .icon .number{
   position: absolute;
   top: 14px;
   right: 2px;
-  background-color: #0464fc;
+  background-color:black;
   border-radius: 15px;
   color: #fff;
   font-size: 10px;
@@ -298,7 +298,7 @@ input:focus {
   min-width: 19px;
   padding: 2px 6px;
   text-align: center;
-  pointer-events: none;
+  
 }
 
 .menu-icon-box .icon a {
@@ -308,15 +308,22 @@ input:focus {
   line-height: 45px;
   display: inline-block;
   border-radius: 50%;
-  color: rgb(4, 4, 243);
+  color:black;
   border: 1px solid transparent;
   margin: 10px 0;
   font-size: 18px;
 }
 
 .menu-icon-box .icon a:hover {
-  background: #0464fc;
-  border-color: #0464fc;
+  background: white;
+  border-color:white;
+  color:#0464fc;
+}
+
+.menu-icon-box .icon .number:hover {
+  background-color: #0464fc;
+  color: #fff;
+
 }
 
 .menu-icon-box:hover > .dropdown {
@@ -329,16 +336,16 @@ input:focus {
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  background-color: #0464fc;
+  background-color: white;
   border-top: 1px solid #e8e9eb;
-  box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
-  color: white;
+  box-shadow: 0 4px 16px rgb(20 23 28 / 25%);
+  color: darkolivegreen;
   font-size: 13px;
   left: inherit;
   list-style: none;
   margin: 0;
   right: -1px;
-  text-align: left;
+  text-align: center;
   top: 100%;
   width: 330px;
 }
@@ -451,8 +458,8 @@ input:focus {
 .course-list-dropdown .dropdown-footer a {
   width: 100%;
   border: 0;
-  color: #fff;
-  background-color: #007791;
+  color: white;
+  background-color: #0464fc;
   padding: 11px 12px;
   font-size: 15px;
   line-height: 1.43;
@@ -469,16 +476,18 @@ input:focus {
 }
 
 .course-list-dropdown .dropdown-footer .cart-total-price {
-  color: #686f7a;
+  color: #0464fc;
   font-size: 15px;
   margin-top: 8px;
+  font-family: inherit;
 }
 
 .course-list-dropdown .dropdown-footer .cart-total-price .current-price {
-  color: #ec5252;
+  color: #0464fc;
   font-size: 18px;
   font-weight: 600;
   margin-right: 5px;
+  font-family: inherit;
 }
 
 .course-list-dropdown .dropdown-footer .cart-total-price .original-price {
@@ -1225,7 +1234,7 @@ input:focus {
 }
 
 .course-box-wrap a {
-  color: #fff;
+  color: #0464fc;
 }
 
 .course-box-wrap a:hover {
@@ -1742,15 +1751,15 @@ input:focus {
 }
 
 .addedToCart {
-  color: #ec5252;
+  color: #0464fc;
   background-color: #ffffff;
-  border-color: #ec5252;
+  border-color: #0464fc;
 }
 
 .addedToCart:hover {
-  color: #ec5252;
+  color: black;
   background-color: #ffffff;
-  border-color: #ec5252;
+  border-color: black;
 }
 
 .course-popover-content .popover-btns .wishlist-btn {
@@ -1764,13 +1773,13 @@ input:focus {
 
 .course-popover-content .popover-btns .wishlist-btn i {
   color: transparent;
-  text-stroke: 1px #ec5252;
-  -webkit-text-stroke: 1px #ec5252;
+  text-stroke: 1px #0464fc;
+  -webkit-text-stroke: 1px #0464fc;
 }
 
 .course-popover-content .popover-btns .wishlist-btn.active i,
 .course-popover-content .popover-btns .wishlist-btn:hover i {
-  color: #ec5252;
+  color: #0464fc;
 }
 
 .webui-popover.left > .webui-arrow,
@@ -2078,7 +2087,10 @@ section.course-header-area {
   max-height: 260px;
   margin-top: 40px;
   margin-bottom: 40px;
+  font-weight: bold;
+  
 }
+
 
 .description-box ul {
   list-style: disc;
@@ -2406,7 +2418,7 @@ section.course-header-area {
 
 .student-feedback-box .average-rating .rating i {
   font-size: 20px;
-  color: #f4c150;
+  color: #0464fc;
   margin-bottom: 5px;
 }
 
@@ -3020,7 +3032,7 @@ ul.pagination .page-item .page-link:hover {
 
 section.page-header-area {
   padding: 40px 0 30px;
-  background: #505763;
+  background: #0464fc;
   color: #fff;
 }
 
@@ -3456,8 +3468,9 @@ section.cart-list-area {
 }
 
 .cart-course-wrapper .price .current-price {
-  color: #ec5252;
+  color: #0464fc;
   font-weight: 900;
+  font-family: inherit;
 }
 
 .cart-course-wrapper .price .original-price {
@@ -3469,20 +3482,23 @@ section.cart-list-area {
   position: absolute;
   top: 2px;
   right: 0;
-  color: #ec5252;
+  color: #0464fc;
   font-size: 14px;
+  font-family: inherit;
 }
 
 .cart-sidebar .total {
-  color: #686f7a;
+  color: black;
   font-size: 18px;
+  font-family: inherit;
 }
 
 .cart-sidebar .total-price {
   font-size: 36px;
   line-height: 49px;
-  color: #ec5252;
+  color: #0464fc;
   font-weight: 600;
+  font-family: inherit;
 }
 
 .cart-sidebar .total-original-price {
@@ -3499,17 +3515,18 @@ section.cart-list-area {
   font-size: 15px;
   line-height: 1.35135;
   border-radius: 2px;
-  color: #fff;
-  background-color: #ec5252;
-  border-color: #ec5252;
+  color: black;
+  background-color: white;
+  border-color: black;
   font-weight: 600;
   padding: 16px 12px;
 }
 
 .cart-sidebar .checkout-btn:hover,
 .cart-sidebar .checkout-btn:focus {
-  background-color: #992337 !important;
-  border-color: #992337 !important;
+  background-color: #0464fc !important;
+  border-color: black !important;
+  color: white;
 }
 
 .cart-sidebar .coupon-field input {
@@ -4262,3 +4279,4 @@ section.purchase-history-list-area {
 element.style {
   width: 8%;
 }
+
