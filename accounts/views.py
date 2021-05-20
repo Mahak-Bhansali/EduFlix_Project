@@ -125,9 +125,9 @@ class StartLessonView(DetailView):
         # try:
             # Get the single item from the filtered queryset
         obj = queryset[:1].get()
-        url = obj.video_url
+        url = obj.video
         # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
-        obj.video_url = url
+        obj.video = url
         # except queryset.model.DoesNotExist:
         #     raise Http404("No %(verbose_name)s found matching the query" %
         #                   {'verbose_name': self.model._meta.verbose_name})
@@ -159,9 +159,9 @@ class LessonView(DetailView):
         # try:
             # Get the single item from the filtered queryset
         obj = queryset.get()
-        url = obj.video_url
+        url = obj.video
         # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
-        obj.video_url = url
+        obj.video = url
         # except queryset.model.DoesNotExist:
             # raise Http404("No %(verbose_name)s found matching the query" %
             #               {'verbose_name': self.model._meta.verbose_name})
