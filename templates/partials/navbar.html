@@ -38,6 +38,11 @@
                     {% if request.user.is_authenticated %}
                         <span class="signin-box-move-desktop-helper"></span>
                         <div class="sign-in-box btn-group">
+                            <a href="{% url 'accounts:instructor-course' %}" 
+                            class=" btn btn-sign-in">Instructor</a>
+                        </div>
+
+                        <div class="sign-in-box btn-group">
                             <a href="{% url 'accounts:enrolled-courses' %}" class=" btn btn-sign-in">My Learnings</a>
                         </div>
                         
