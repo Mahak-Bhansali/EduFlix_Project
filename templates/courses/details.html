@@ -290,10 +290,13 @@
                             {#                            {{ --</div>--}}#}
                             <div class="buy-btns">
                                 {% if is_enrolled %}
-                                    <button class="btn btn-add-cart" type="button"
+                                <form action="{% url 'cart:cart_add' course.slug %}" method="post">
+                                    <button class="btn btn-add-cart" type ="button" 
                                             style="background-color: #00796b; border-color: #08796f; color: #ffffff">
                                         Go to course
                                     </button>
+                                  </form>
+
                                 {% else %}
                                     {% if is_in_cart %}
                                         {#                                    <a href="" class="btn btn-buy-now" id="course_2" onclick="handleBuyNow(this)">Buy#}
