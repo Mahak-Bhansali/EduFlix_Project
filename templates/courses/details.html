@@ -111,18 +111,17 @@
                         </div>
                     </div>
 
-
-                    
+               
 
                    
                 </div>
                 <div class="col-lg-4">
                     <div class="course-sidebar natural">
-                        <div class="preview-video-box">
+                        <div class="">
                             <a data-toggle="modal" data-target="#CoursePreviewModal">
-                                <img src="{% static 'images/learning.jpg' %}" alt="" class="img-fluid">
-                                <span class="preview-text">Preview this course</span>
-                                <span class="play-btn"></span>
+                                <img src="{{ course.thumbnail.url }}" alt="" class="img-fluid" style="height: 200px; width: 400px">
+                                {% comment %} <span class="preview-text">Preview this course</span> {% endcomment %}
+                                {% comment %} <span class="play-btn"></span> {% endcomment %}
                             </a>
                         </div>
                         <div class="course-sidebar-text-box">
@@ -137,19 +136,10 @@
                             {#                            {{ --</div>--}}#}
                             <div class="buy-btns">
                                 {% if is_enrolled %}
-<<<<<<< HEAD
-                                <form action="{% url 'cart:cart_add' course.slug %}" method="post">
-                                    <button class="btn btn-add-cart" type ="button" 
-                                            style="background-color: #00796b; border-color: #08796f; color: #ffffff">
-                                            <a href="{% url 'accounts:course-lessons' course.slug %}" class="btn">Go to course</a>                                    
-                                            </button>
-                                  </form>
-=======
                                 {% comment %} <form action="{% url 'cart:cart_add' course.slug %}" method="post"> {% endcomment %}
                                     
                                         <a class="btn btn-add-cart" href="{% url 'accounts:course-lessons' course.slug %}" class="btn">Go to course</a>
                                   {% comment %} </form> {% endcomment %}
->>>>>>> 0562a3928f02549534ade93a365985c88eaa3539
 
                                 {% else %}
                                     {% if is_in_cart %}

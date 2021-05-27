@@ -57,9 +57,10 @@
                                 <li>
                                     <div class="course-box-2">
                                         <div class="course-image">
-                                            <a href="{% url 'courses:course-details' course.slug %}">
-                                                <img src="{% static 'images/learning.jpg' %}" alt="" class="img-fluid">
-                                            </a>
+                                            {% comment %} <a href="{% url 'courses:course-details' course.slug %}"> {% endcomment %}
+                                                
+                                                <img src="{{ course.thumbnail.url }}" style="height: 200px; width: 400px" alt="" class="img-fluid">
+                                            {% comment %} </a> {% endcomment %}
                                         </div>
                                         <div class="course-details">
                                             <a href="{% url 'courses:course-details' course.slug %}"
