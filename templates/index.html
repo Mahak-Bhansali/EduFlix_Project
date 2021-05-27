@@ -79,15 +79,9 @@
                                         <div class="course-details">
                                             <h5 class="title">{{ top_course.title }}</h5>
                                             <p class="instructors">{{ top_course.short_description }}</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star filled"></i>
-                                                <i class="fas fa-star"></i>
-                                                <span class="d-inline-block average-rating">5</span>
-                                            </div>
+                                            
                                             <p class="price text-right">
-                                                ${{ top_course.price | floatformat:2 | intcomma }}
+                                                ₹{{ top_course.price | floatformat:2 | intcomma }}
                                             </p>
                                         </div>
                                     </div>
@@ -104,9 +98,7 @@
                                             <span class=""><i class="fas fa-play-circle"></i>
                                                 0 Lessons
                                             </span>
-                                            <span class=""><i class="far fa-clock"></i>
-                                                2 Hours
-                                            </span>
+                                            
                                             <span class="">
                                                 <i class="fas fa-closed-captioning"></i>English
                                             </span>
