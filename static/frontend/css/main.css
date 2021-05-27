@@ -2088,6 +2088,7 @@ section.course-header-area {
   margin-top: 40px;
   margin-bottom: 40px;
   font-weight: bold;
+  text-align: justify;
   
 }
 
@@ -2121,12 +2122,14 @@ section.course-header-area {
   border: 1px solid #dedfe0;
   padding: 10px 15px;
   margin-top: 40px;
+  text-align: justify;
 }
 
 .what-you-get-box .what-you-get-title {
   font-size: 22px;
   font-weight: 600;
   margin: 0 0 10px;
+  text-align: justify;
 }
 
 .what-you-get-box ul {
@@ -2146,6 +2149,7 @@ section.course-header-area {
   padding-left: 26px;
   font-size: 15px;
   position: relative;
+  text-align: justify;
 }
 
 .what-you-get-box ul li:before {
@@ -2164,16 +2168,19 @@ section.course-header-area {
   position: absolute;
   left: 0;
   top: 4px;
+  text-align: justify;
 }
 
 .requirements-box {
   margin-top: 40px;
+  text-align: justify;
 }
 
 .requirements-box .requirements-title {
   font-size: 22px;
   font-weight: 600;
   margin: 0 0 10px;
+  text-align: justify;
 }
 
 .requirements-box .requirements__list {
