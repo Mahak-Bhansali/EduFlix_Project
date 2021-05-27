@@ -53,7 +53,7 @@
                                     {{ course.lessons.count }} lessons
                                 </span>
                                 <span class="total-time">
-                                    2 hours
+                                    {{ course.lessons|total_minutes | floatformat:2 }} minute
                                 </span>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                                         on demand videos
                                     </li>
                                     <li>
-                                        <i class="far fa-file"></i> 30 lessons
+                                        <i class="far fa-file"></i> {{ course.lessons.count }} lessons
                                     </li>
                                     <li><i class="far fa-compass"></i>Full lifetime access
                                     </li>
