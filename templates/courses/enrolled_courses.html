@@ -53,17 +53,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="my-course-search-bar">
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control"
-                                       placeholder="Search my courses">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                   
                 </div>
             </div>
             <div class="row no-gutters" id="my_courses_area">
@@ -83,26 +73,7 @@
                                         <h5 class="title">{{ enroll.course.title }}</h5>
                                     </a>
                                     <p class="instructors"></p>
-                                    <div class="rating your-rating-box"
-                                         data-toggle="modal" data-id="{{ enroll.course.id }}"
-                                         data-target="#EditRatingModal">
-
-                                        {#                                        @php#}
-                                        {#                                        $my_rating = $enroll->course->review()['rating'];#}
-                                        {#                                        @endphp#}
-                                        {#                                        @for($i = 1; $i <= 5; $i++)#}
-                                        {#                                        @if ($i <= $my_rating)#}
-                                        {#                                        <i class="fas fa-star filled"></i>#}
-                                        {#                                        @else#}
-                                        {#                                        <i class="fas fa-star"></i>#}
-                                        {#                                        @endif#}
-                                        {#                                        @endfor#}
-                                        <p class="your-rating-text" id="ratings">
-                                            <span class="your">Your</span>
-                                            <span class="edit">Edit</span>
-                                            Rating
-                                        </p>
-                                    </div>
+                                    
                                 </div>
                                 <div class="row" style="padding: 5px;">
                                     <div class="col-md-6">
