@@ -198,3 +198,10 @@ class ProfileUpdateView(UpdateView):
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
+
+class InstructorView(DetailView):
+    model = Course
+    template_name = "instructor/instructor.html"
+    context_object_name = 'course'
+
+
