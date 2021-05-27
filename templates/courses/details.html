@@ -137,12 +137,10 @@
                             {#                            {{ --</div>--}}#}
                             <div class="buy-btns">
                                 {% if is_enrolled %}
-                                <form action="{% url 'cart:cart_add' course.slug %}" method="post">
-                                    <button class="btn btn-add-cart" type ="button" 
-                                            style="background-color: #00796b; border-color: #08796f; color: #ffffff">
-                                        Go to course
-                                    </button>
-                                  </form>
+                                {% comment %} <form action="{% url 'cart:cart_add' course.slug %}" method="post"> {% endcomment %}
+                                    
+                                        <a class="btn btn-add-cart" href="{% url 'accounts:course-lessons' course.slug %}" class="btn">Go to course</a>
+                                  {% comment %} </form> {% endcomment %}
 
                                 {% else %}
                                     {% if is_in_cart %}
