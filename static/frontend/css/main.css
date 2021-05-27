@@ -1017,6 +1017,7 @@ input:focus {
   -ms-flex: 0 0 18%;
   flex: 0 0 18%;
   max-width: 18%;
+  padding: 0%;
 }
 
 .course-preview-modal
@@ -1748,6 +1749,7 @@ input:focus {
 .course-popover-content .popover-btns .add-to-cart-btn {
   width: 100%;
   padding: 16px 12px;
+
 }
 
 .addedToCart {
