@@ -31,10 +31,13 @@ class Course(models.Model):
     price = models.FloatField(validators=[MinValueValidator(9.99)])
     level = models.CharField(max_length=20)
     thumbnail = models.ImageField(upload_to='thumbnails/')
-    video_url = models.CharField(max_length=100)
+    #video_url = models.CharField(max_length=100)
     is_published = models.BooleanField(default=True)
     created_at = models.DateTimeField(default=now)
     updated_at = models.DateTimeField(default=now)
+
+    def __str__(self):
+        return self.title
 
     def __str__(self):
         return self.title
@@ -55,3 +58,4 @@ class Lesson(models.Model):
 
     def __str__(self):
         return self.title
+

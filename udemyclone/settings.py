@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'udemy',
     'courses',
     'cart',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

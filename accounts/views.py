@@ -11,6 +11,7 @@ from courses.models import Category, Lesson, Course
 from udemy.models import Enroll
 from .models import User
 from .forms import UserRegistrationForm, UserLoginForm, ProfileUpdateForm
+from courses.forms import CreateCourseForm, CreateLessonForm
 
 
 class RegisterView(CreateView):
@@ -123,7 +124,7 @@ class StartLessonView(DetailView):
         course = get_object_or_404(Course, slug=self.kwargs["slug"])
         queryset = queryset.filter(course=course)
         # try:
-            # Get the single item from the filtered queryset
+        # Get the single item from the filtered queryset
         obj = queryset[:1].get()
         url = obj.video
         # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
@@ -157,14 +158,14 @@ class LessonView(DetailView):
         lesson_id = self.kwargs['id']
         queryset = queryset.filter(id=lesson_id)
         # try:
-            # Get the single item from the filtered queryset
+        # Get the single item from the filtered queryset
         obj = queryset.get()
         url = obj.video
         # url = url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
         obj.video = url
         # except queryset.model.DoesNotExist:
-            # raise Http404("No %(verbose_name)s found matching the query" %
-            #               {'verbose_name': self.model._meta.verbose_name})
+        # raise Http404("No %(verbose_name)s found matching the query" %
+        #               {'verbose_name': self.model._meta.verbose_name})
         return obj
 
     def get_context_data(self, **kwargs):
@@ -199,9 +200,14 @@ class ProfileUpdateView(UpdateView):
         else:
             return self.form_invalid(form)
 
-class InstructorView(DetailView):
+
+class InstructorView(CreateView):
     model = Course
-    template_name = "instructor/instructor.html"
-    context_object_name = 'course'
+    # template_name = "instructor/createcourse.html"
+    template_name = "instructor/index.html"
+    fields = '__all__'
+    context_object_name = "course"
+
+    # success_url = reverse_lazy("accounts:my-profile")
 
 

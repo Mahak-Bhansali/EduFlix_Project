@@ -9,10 +9,12 @@ urlpatterns = [
     path('register', views.RegisterView.as_view(), name='register'),
     path('logout', views.LogoutView.as_view(), name='logout'),
     path('users/', include([
+        path('instructor', views.InstructorView.as_view(),
+             name='instructor-course'),
         path('my-courses', views.EnrolledCoursesListView.as_view(), name='enrolled-courses'),
         path('my-courses/<slug:slug>/view', views.StartLessonView.as_view(), name='course-lessons'),
         path('my-courses/<slug:slug>/lessons/<int:id>', views.LessonView.as_view(), name='course-lessons-single'),
         path('profile', views.ProfileUpdateView.as_view(), name='my-profile'),
-        path('instructor', views.InstructorView.as_view(),name='instructor-course'),
+        
     ])),
 ]
