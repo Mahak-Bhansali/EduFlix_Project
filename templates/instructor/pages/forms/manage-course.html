@@ -1,3 +1,5 @@
+{% extends 'layouts/base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +19,11 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- End layout styles -->
   </head>
+
+  {% load widget_tweaks %}
+  {% block content %}
+
+
   <body>
     <div class=" container-scroller">
       <!-- partial:../../partials/_navbar.html -->
@@ -42,19 +49,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../index.html">
+              <a class="nav-link" href="{% url 'accounts:instructor-course' %}">
                 <span class="menu-title">Dashboard</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/forms/create-course.html">
+              <a class="nav-link" href="{% url 'accounts:add-course' %}">
                 <span class="menu-title">Create Course</span>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/forms/manage-course.html">
+              <a class="nav-link" href="{% url 'accounts:your-courses' %}">
                 <span class="menu-title">Your Courses</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
@@ -111,7 +118,7 @@
                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#">Edit Course Details</a>
                                 <a class="dropdown-item" href="#">Delete Course</a>
-                                <a class="dropdown-item" href="../../pages/forms/manage-lessons.html">Lessons</a>
+                                <a class="dropdown-item" href="{% url 'accounts:add-lesson' %}">Lessons</a>
                                 <a class="dropdown-item" href="#">Preview as students</a>
                                </div>
                               </div>
@@ -167,4 +174,5 @@
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
   </body>
+  {% endblock content %}
 </html>

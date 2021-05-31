@@ -211,3 +211,30 @@ class InstructorView(CreateView):
     # success_url = reverse_lazy("accounts:my-profile")
 
 
+class CreateCourseView(CreateView):
+    model = Course
+    # template_name = "instructor/createcourse.html"
+    template_name = "instructor/pages/forms/create-course.html"
+    fields = '__all__'
+    success_url = reverse_lazy("accounts:add-lesson")
+
+
+class YourCourseView(ListView):
+    model = Course
+    # template_name = "instructor/createcourse.html"
+    template_name = "instructor/pages/forms/manage-course.html"
+    fields = '__all__'
+
+
+class AddLessonView(CreateView):
+    model = Lesson
+    template_name = 'instructor/pages/forms/manage-lessons.html'
+    context_object_name = 'lesson'
+    fields = '__all__'
+
+
+
+
+
+
+

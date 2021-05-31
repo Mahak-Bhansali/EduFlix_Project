@@ -1,5 +1,10 @@
 {% extends 'layouts/base.html' %} {% load widget_tweaks %} {% block content %}
 
+<!-- partial:partials/_sidebar.html -->
+
+<div class="container-scroller">
+
+        
 <div class="container pb-5 pt-4">
   <h1 class="pb-4">Create course</h1>
   <form method="post" novalidate>
@@ -19,5 +24,7 @@
       </button>
     </div>
   </form>
+</div>
+
 </div>
 {% endblock %}
